@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@mixin submit-button($background, $hover-background, $pl, $pr) {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  padding-left: $pl;
+  padding-right: $pr;
+  background: $background;
+  transition: all 0.3s ease-in-out;
+  font-family: "Inter Bold";
+  font-size: 16px;
+  color: #000000;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  &:hover {
+    background: $hover-background;
+    cursor: pointer;
+  }
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url("../assets/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("../assets/fonts/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter Semibold";
+  src: url("../assets/fonts/Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Inter Medium";
+  src: url("../assets/fonts/Inter-Medium.ttf");
+}
+
+@import "blocks/header.scss";

@@ -1,3 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+.center {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url("../assets/fonts/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter Bold";
+  src: url("../assets/fonts/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter Semibold";
+  src: url("../assets/fonts/Inter-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Inter Medium";
+  src: url("../assets/fonts/Inter-Medium.ttf");
+}
+div.header-top {
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  padding: 18px 0;
+  background: #fff;
+}
+div.header-top div.header-top-inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.header-top div.header-top-inside nav a {
+  margin-left: 64px;
+  font-family: "Inter Regular";
+  text-decoration: none;
+  color: #001f3b;
+}
+
+header.page-header {
+  position: relative;
+  background-image: url("../assets/images/header-clouds.png"), linear-gradient(180deg, #3e81d8 0%, #98b8e0 100%);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  padding-top: 260px;
+  padding-bottom: 300px;
+}
+header.page-header > img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+header.page-header div.header-inside > h1 {
+  max-width: 600px;
+  font-family: "Inter Bold";
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+header.page-header div.header-inside > p {
+  font-family: "Inter Regular";
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+  max-width: 388px;
+  margin-bottom: 56px;
+}
+header.page-header div.header-inside button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  padding-left: 24px;
+  padding-right: 16px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  font-family: "Inter Bold";
+  font-size: 16px;
+  color: #000000;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+header.page-header div.header-inside button:hover {
+  background: #fbc73b;
+  cursor: pointer;
+}
+header.page-header div.header-inside button svg {
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+header.page-header div.header-inside button:hover svg {
+  transform: translateX(5px);
+}
+
+div.advantages {
+  position: absolute;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 24px;
+}
+div.advantages div.advantage {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  box-sizing: border-box;
+}
+div.advantages div.advantage h1 {
+  margin-top: 16px;
+  font-family: "Inter Semibold";
+  font-size: 18px;
+  color: #001f3b;
+}
+div.advantages div.advantage p {
+  margin-top: 10px;
+  font-family: "Inter Medium";
+  font-size: 15px;
+  color: #8d99a5;
+}
 
 /*# sourceMappingURL=style.css.map */

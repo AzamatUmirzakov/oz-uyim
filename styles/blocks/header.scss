@@ -1,0 +1,92 @@
+$header-nav-color: #001f3b;
+
+div.header-top {
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  padding: 18px 0;
+  background: #fff;
+  div.header-top-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+      a {
+        margin-left: 64px;
+        font-family: "Inter Regular";
+        text-decoration: none;
+        color: $header-nav-color;
+      }
+    }
+  }
+}
+
+header.page-header {
+  position: relative;
+  & > img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  background-image: url("../assets/images/header-clouds.png"),
+    linear-gradient(180deg, #3e81d8 0%, #98b8e0 100%);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  padding-top: 260px;
+  padding-bottom: 300px;
+  div.header-inside {
+    & > h1 {
+      max-width: 600px;
+      font-family: "Inter Bold";
+      font-size: 60px;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    & > p {
+      font-family: "Inter Regular";
+      font-size: 18px;
+      line-height: 27px;
+      color: #fff;
+      max-width: 388px;
+      margin-bottom: 56px;
+    }
+    button {
+      @include submit-button(#fff, #fbc73b, 24px, 16px);
+      svg {
+        margin-left: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        svg {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
+
+div.advantages {
+  position: absolute;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 24px;
+  div.advantage {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    box-sizing: border-box;
+    h1 {
+      margin-top: 16px;
+      font-family: "Inter Semibold";
+      font-size: 18px;
+      color: $header-nav-color;
+    }
+    p {
+      margin-top: 10px;
+      font-family: "Inter Medium";
+      font-size: 15px;
+      color: #8d99a5;
+    }
+  }
+}

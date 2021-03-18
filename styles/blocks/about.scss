@@ -1,0 +1,38 @@
+section.about {
+  div.about-inside {
+    padding-top: 265px;
+    padding-bottom: 175px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 125px;
+    align-items: center;
+    div.about-text {
+      h1 {
+        font-family: "Inter Bold";
+        font-size: 36px;
+        color: #001f3c;
+        margin-bottom: 28px;
+      }
+      p {
+        color: #001f3b;
+        opacity: 0.5;
+        font-family: "Inter Regular";
+        font-size: 22px;
+        margin-bottom: 40px;
+        line-height: 29px;
+      }
+      button.submit-button {
+        @include submit-button(#fbc73b, #fff, 24px, 21px);
+        &:hover {
+          svg {
+            transform: translateX(5px);
+          }
+        }
+        svg {
+          transition: all 0.3s ease-in-out;
+          margin-left: 17px;
+        }
+      }
+    }
+  }
+}

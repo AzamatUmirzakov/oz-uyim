@@ -125,4 +125,54 @@ div.advantages div.advantage p {
   color: #8d99a5;
 }
 
+section.about div.about-inside {
+  padding-top: 265px;
+  padding-bottom: 175px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 125px;
+  align-items: center;
+}
+section.about div.about-inside div.about-text h1 {
+  font-family: "Inter Bold";
+  font-size: 36px;
+  color: #001f3c;
+  margin-bottom: 28px;
+}
+section.about div.about-inside div.about-text p {
+  color: #001f3b;
+  opacity: 0.5;
+  font-family: "Inter Regular";
+  font-size: 22px;
+  margin-bottom: 40px;
+  line-height: 29px;
+}
+section.about div.about-inside div.about-text button.submit-button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  padding-left: 24px;
+  padding-right: 21px;
+  background: #fbc73b;
+  transition: all 0.3s ease-in-out;
+  font-family: "Inter Bold";
+  font-size: 16px;
+  color: #000000;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+section.about div.about-inside div.about-text button.submit-button:hover {
+  background: #fff;
+  cursor: pointer;
+}
+section.about div.about-inside div.about-text button.submit-button:hover svg {
+  transform: translateX(5px);
+}
+section.about div.about-inside div.about-text button.submit-button svg {
+  transition: all 0.3s ease-in-out;
+  margin-left: 17px;
+}
+
 /*# sourceMappingURL=style.css.map */

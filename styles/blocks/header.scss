@@ -4,14 +4,22 @@ div.header-top {
   z-index: 10;
   position: fixed;
   width: 100vw;
-  padding: 18px 0;
   background: #fff;
   div.header-top-inside {
+    // padding: 18px 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    nav {
+    nav.header-nav {
+      display: block;
+      box-sizing: border-box;
+      height: calc(100%);
       a {
+        height: calc(100%);
+        display: inline-block;
+        height: 100%;
+        padding: 28px 0;
         margin-left: 64px;
         font-family: "Inter Regular";
         text-decoration: none;
@@ -51,7 +59,10 @@ header.page-header {
       margin-bottom: 56px;
     }
     button {
-      @include submit-button(#fff, #fbc73b, 24px, 16px);
+      @include submit-button(#fff, #f7f7f7, 24px, 16px);
+      &:active {
+        background-color: #f0f0f0;
+      }
       svg {
         margin-left: 10px;
         transition: all 0.3s ease-in-out;

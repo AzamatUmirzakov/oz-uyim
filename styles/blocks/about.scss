@@ -22,11 +22,15 @@ section.about {
         line-height: 29px;
       }
       button.submit-button {
-        @include submit-button(#fbc73b, #fff, 24px, 21px);
+        @include submit-button(#fbc73b, #f7bb08, 24px, 21px);
+        color: #32280c;
         &:hover {
           svg {
             transform: translateX(5px);
           }
+        }
+        &:active {
+          background-color: #f4b701;
         }
         svg {
           transition: all 0.3s ease-in-out;

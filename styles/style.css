@@ -28,15 +28,24 @@ div.header-top {
   z-index: 10;
   position: fixed;
   width: 100vw;
-  padding: 18px 0;
   background: #fff;
 }
 div.header-top div.header-top-inside {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-div.header-top div.header-top-inside nav a {
+div.header-top div.header-top-inside nav.header-nav {
+  display: block;
+  box-sizing: border-box;
+  height: calc(100%);
+}
+div.header-top div.header-top-inside nav.header-nav a {
+  height: calc(100%);
+  display: inline-block;
+  height: 100%;
+  padding: 28px 0;
   margin-left: 64px;
   font-family: "Inter Regular";
   text-decoration: none;
@@ -88,8 +97,11 @@ header.page-header div.header-inside button {
   border-radius: 7px;
 }
 header.page-header div.header-inside button:hover {
-  background: #fbc73b;
+  background: #f7f7f7;
   cursor: pointer;
+}
+header.page-header div.header-inside button:active {
+  background-color: #f0f0f0;
 }
 header.page-header div.header-inside button svg {
   margin-left: 10px;
@@ -162,13 +174,17 @@ section.about div.about-inside div.about-text button.submit-button {
   border: none;
   outline: none;
   border-radius: 7px;
+  color: #32280c;
 }
 section.about div.about-inside div.about-text button.submit-button:hover {
-  background: #fff;
+  background: #f7bb08;
   cursor: pointer;
 }
 section.about div.about-inside div.about-text button.submit-button:hover svg {
   transform: translateX(5px);
+}
+section.about div.about-inside div.about-text button.submit-button:active {
+  background-color: #f4b701;
 }
 section.about div.about-inside div.about-text button.submit-button svg {
   transition: all 0.3s ease-in-out;

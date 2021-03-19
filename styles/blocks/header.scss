@@ -5,6 +5,9 @@ div.header-top {
   position: fixed;
   width: 100vw;
   background: #fff;
+  top: -100px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
   div.header-top-inside {
     // padding: 18px 0;
     box-sizing: border-box;
@@ -27,6 +30,9 @@ div.header-top {
       }
     }
   }
+}
+div.header-top.active {
+  top: 0px;
 }
 
 header.page-header {

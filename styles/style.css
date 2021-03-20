@@ -96,7 +96,8 @@ header.page-header div.header-inside button {
   padding-right: 16px;
   background: #fff;
   transition: all 0.3s ease-in-out;
-  font-family: "Inter Bold";
+  font-family: "Inter Regular";
+  font-weight: 500;
   font-size: 16px;
   color: #000000;
   border: none;
@@ -115,7 +116,7 @@ header.page-header div.header-inside button svg {
   transition: all 0.3s ease-in-out;
 }
 header.page-header div.header-inside button:hover svg {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
 div.advantages {
@@ -130,6 +131,7 @@ div.advantages div.advantage {
   border-radius: 12px;
   padding: 32px;
   box-sizing: border-box;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.07);
 }
 div.advantages div.advantage h1 {
   margin-top: 16px;
@@ -175,7 +177,8 @@ section.about div.about-inside div.about-text button.submit-button {
   padding-right: 21px;
   background: #fbc73b;
   transition: all 0.3s ease-in-out;
-  font-family: "Inter Bold";
+  font-family: "Inter Regular";
+  font-weight: 500;
   font-size: 16px;
   color: #000000;
   border: none;
@@ -188,7 +191,7 @@ section.about div.about-inside div.about-text button.submit-button:hover {
   cursor: pointer;
 }
 section.about div.about-inside div.about-text button.submit-button:hover svg {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 section.about div.about-inside div.about-text button.submit-button:active {
   background-color: #f4b701;
@@ -361,7 +364,8 @@ section.submit-form form#submit-form button {
   padding-right: 130px;
   background: #fbc73b;
   transition: all 0.3s ease-in-out;
-  font-family: "Inter Bold";
+  font-family: "Inter Regular";
+  font-weight: 500;
   font-size: 16px;
   color: #000000;
   border: none;
@@ -378,7 +382,7 @@ section.submit-form form#submit-form button svg {
   transition: all 0.3s ease-in-out;
 }
 section.submit-form form#submit-form button:hover svg {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
 footer.page-footer {

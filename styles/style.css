@@ -341,11 +341,18 @@ section.submit-form form#submit-form div.inputs div input {
   color: #4f4f4f;
   font-family: "Inter Regular";
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
 section.submit-form form#submit-form div.inputs div input::placeholder {
   color: #4f4f4f;
   font-family: "Inter Regular";
   font-size: 16px;
+}
+section.submit-form form#submit-form div.inputs div input:hover {
+  background: #fafafa;
+}
+section.submit-form form#submit-form div.inputs div input:active, section.submit-form form#submit-form div.inputs div input:focus {
+  color: #32280c;
 }
 section.submit-form form#submit-form div.inputs div:first-of-type {
   border-radius: 12px 12px 0 0;

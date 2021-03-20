@@ -65,10 +65,18 @@ section.submit-form {
           color: #4f4f4f;
           font-family: "Inter Regular";
           font-size: 16px;
+          transition: all 0.3s ease-in-out;
           &::placeholder {
             color: #4f4f4f;
             font-family: "Inter Regular";
             font-size: 16px;
+          }
+          &:hover {
+            background: #fafafa;
+          }
+          &:active,
+          &:focus {
+            color: #32280c;
           }
         }
       }

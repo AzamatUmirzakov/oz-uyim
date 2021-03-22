@@ -475,10 +475,13 @@ section.submit-form form#submit-form {
   justify-content: center;
   align-items: center;
 }
+section.submit-form form#submit-form div.inputs {
+  width: 420px;
+}
 section.submit-form form#submit-form div.inputs button,
 section.submit-form form#submit-form div.inputs div,
 section.submit-form form#submit-form div.inputs input {
-  width: 420px;
+  width: 100%;
   box-sizing: border-box;
   border: none;
   outline: none;
@@ -546,7 +549,8 @@ section.submit-form form#submit-form button {
   border: none;
   outline: none;
   border-radius: 7px;
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   box-sizing: border-box;
 }
 section.submit-form form#submit-form button:hover {
@@ -588,6 +592,14 @@ footer.page-footer div.footer-inside p {
     font-size: 32px;
     line-height: 44.8px;
     margin-bottom: 29px;
+  }
+  section.submit-form form#submit-form button {
+    justify-content: center;
+    align-items: center;
+    padding: 16px 50px;
+  }
+  section.submit-form form#submit-form button svg {
+    margin-left: 17px;
   }
 }
 @media (max-width: 1180px) {

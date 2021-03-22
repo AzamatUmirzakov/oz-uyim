@@ -58,3 +58,33 @@ section.about {
     }
   }
 }
+
+@media (max-width: 1080px) {
+  section.about {
+    div.about-inside {
+      padding-top: 390px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      // grid-template-columns: 1fr;
+      // grid-template-rows: 1fr 1fr;
+      // row-gap: 40px;
+      // padding-bottom: 85px;
+      // div.about-text {
+      //   grid-row-start: 2;
+      //   grid-row-end: 3;
+      //   align-self: flex-start;
+      //   max-width: 480px;
+      // }
+      div.about-text {
+        order: 2;
+        max-width: 480px;
+      }
+      img {
+        order: 1;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

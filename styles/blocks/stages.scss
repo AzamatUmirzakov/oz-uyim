@@ -96,3 +96,27 @@ section.stages {
     }
   }
 }
+
+@media (max-width: 1080px) {
+  section.stages {
+    div.stages-inside {
+      header {
+        h1 {
+          margin-bottom: 72px;
+        }
+      }
+      ul.stages-list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+        li {
+          padding-bottom: 210px;
+          p {
+            max-width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

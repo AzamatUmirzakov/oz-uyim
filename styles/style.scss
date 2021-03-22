@@ -61,3 +61,11 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: 1080px) {
+  .center {
+    max-width: 100vw;
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}

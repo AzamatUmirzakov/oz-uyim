@@ -6,12 +6,22 @@ document.querySelector("header.page-header > img").style.right = margin + "px";
 
 let advantages = document.querySelector("div.advantages");
 
-advantages.style.bottom = "0px";
-for (let advantage of advantages.children) {
-  advantage.style.marginBottom = -advantage.offsetHeight / 2 + "px";
+if (!window.matchMedia("(max-width: 1080px)").matches) {
+  advantages.style.bottom = "0px";
+  for (let advantage of advantages.children) {
+    advantage.style.marginBottom = -advantage.offsetHeight / 2 + "px";
+  }
 }
-advantages.style.paddingLeft = margin + "px";
-advantages.style.paddingRight = margin + "px";
+if (window.matchMedia("(max-width: 1080px)").matches) {
+  advantages.style.bottom = `-${
+    parseFloat(getComputedStyle(advantages).height) -
+    advantages.firstElementChild.offsetHeight / 2
+  }px`;
+}
+if (!window.matchMedia("(max-width: 1080px)").matches) {
+  advantages.style.paddingLeft = margin + "px";
+  advantages.style.paddingRight = margin + "px";
+}
 
 let last_scroll = 0;
 window.addEventListener("scroll", () => {

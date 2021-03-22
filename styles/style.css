@@ -582,7 +582,7 @@ footer.page-footer div.footer-inside p {
 }
 @media (max-width: 480px) {
   section.submit-form {
-    padding: 88px 0;
+    padding: 88px 31px;
   }
   section.submit-form div.submit-form-text h1 {
     font-size: 32px;

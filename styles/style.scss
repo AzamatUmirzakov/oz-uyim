@@ -54,3 +54,10 @@
 @import "blocks/about.scss";
 @import "blocks/stages.scss";
 @import "blocks/submit-form.scss";
+
+@media (max-width: 1180px) {
+  .center {
+    max-width: 952px;
+    margin: 0 auto;
+  }
+}

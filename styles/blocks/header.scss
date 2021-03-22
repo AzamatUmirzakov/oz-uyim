@@ -1,7 +1,7 @@
 $header-nav-color: #001f3b;
 
 div.header-top {
-  z-index: 10;
+  z-index: 12;
   position: fixed;
   width: 100vw;
   background: #fff;
@@ -37,18 +37,27 @@ div.header-top.active {
 
 header.page-header {
   position: relative;
-  & > img {
+  & > img:first-of-type {
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 2;
   }
-  background-image: url("../assets/images/header-clouds.png"),
-    linear-gradient(180deg, #3e81d8 0%, #98b8e0 100%);
+  & > img:last-of-type {
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+    width: 100%;
+  }
+  background-image: linear-gradient(180deg, #3e81d8 0%, #98b8e0 100%);
   background-repeat: repeat-x;
-  background-position: bottom center;
+  background-position: center bottom;
+  background-size: cover;
   padding-top: 260px;
   padding-bottom: 300px;
   div.header-inside {
+    position: relative;
+    z-index: 10;
     & > h1 {
       max-width: 600px;
       font-family: "Inter Bold";
@@ -88,6 +97,7 @@ div.advantages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 24px;
+  z-index: 2;
   div.advantage {
     background: #fff;
     border-radius: 12px;
@@ -106,6 +116,31 @@ div.advantages {
       font-family: "Inter Medium";
       font-size: 15px;
       color: #8d99a5;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  header.page-header {
+    div.header-inside {
+      h1 {
+        font-size: 48px;
+      }
+    }
+    & > img:last-of-type {
+      position: absolute;
+      right: 0;
+      bottom: -50px;
+      width: 100%;
+    }
+  }
+  div.advantages {
+    div.advantage {
+      padding: 24px;
+      h1 {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
     }
   }
 }

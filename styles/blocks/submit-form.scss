@@ -4,6 +4,7 @@ section.submit-form {
     linear-gradient(180deg, #f1f9f9 0%, rgba(247, 250, 250, 0.62) 100%);
   background-position: top center;
   background-repeat: repeat-x;
+  background-size: cover;
   div.submit-form-text {
     text-align: center;
     display: flex;
@@ -56,9 +57,16 @@ section.submit-form {
         justify-content: space-between;
         align-items: center;
         height: 65px;
+        transition: all 0.3s ease-out;
         label {
           margin-right: 18px;
         }
+          &:hover {
+            background: #fafafa;
+            input {
+            background: #fafafa;
+            }
+          }
         input {
           width: 100%;
           height: 100%;
@@ -66,13 +74,11 @@ section.submit-form {
           font-family: "Inter Regular";
           font-size: 16px;
           transition: all 0.3s ease-in-out;
+          padding-right: 20px;
           &::placeholder {
             color: #4f4f4f;
             font-family: "Inter Regular";
             font-size: 16px;
-          }
-          &:hover {
-            background: #fafafa;
           }
           &:active,
           &:focus {

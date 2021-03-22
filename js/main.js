@@ -14,13 +14,24 @@ advantages.style.paddingLeft = margin + "px";
 advantages.style.paddingRight = margin + "px";
 
 let last_scroll = 0;
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   console.log(true);
   if (window.pageYOffset > last_scroll) {
-    document.querySelector('div.header-top').classList.remove('active');
+    document.querySelector("div.header-top").classList.remove("active");
     last_scroll = window.pageYOffset;
   } else {
-    document.querySelector('div.header-top').classList.add('active');
+    document.querySelector("div.header-top").classList.add("active");
     last_scroll = window.pageYOffset;
   }
-})
+});
+
+for (let image of Array.from(
+  document.querySelectorAll("header.page-header > img")
+)) {
+  image.addEventListener("dragstart", (event) => {
+    event.preventDefault();
+  });
+  image.addEventListener("select", (e) => {
+    e.preventDefault();
+  });
+}

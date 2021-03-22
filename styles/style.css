@@ -25,7 +25,7 @@
   src: url("../assets/fonts/Inter-Medium.ttf");
 }
 div.header-top {
-  z-index: 10;
+  z-index: 12;
   position: fixed;
   width: 100vw;
   background: #fff;
@@ -61,16 +61,28 @@ div.header-top.active {
 
 header.page-header {
   position: relative;
-  background-image: url("../assets/images/header-clouds.png"), linear-gradient(180deg, #3e81d8 0%, #98b8e0 100%);
+  background-image: linear-gradient(180deg, #3e81d8 0%, #98b8e0 100%);
   background-repeat: repeat-x;
-  background-position: bottom center;
+  background-position: center bottom;
+  background-size: cover;
   padding-top: 260px;
   padding-bottom: 300px;
 }
-header.page-header > img {
+header.page-header > img:first-of-type {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: 2;
+}
+header.page-header > img:last-of-type {
+  position: absolute;
+  right: 0;
+  bottom: -200px;
+  width: 100%;
+}
+header.page-header div.header-inside {
+  position: relative;
+  z-index: 10;
 }
 header.page-header div.header-inside > h1 {
   max-width: 600px;
@@ -125,6 +137,7 @@ div.advantages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 24px;
+  z-index: 2;
 }
 div.advantages div.advantage {
   background: #fff;
@@ -146,6 +159,25 @@ div.advantages div.advantage p {
   color: #8d99a5;
 }
 
+@media (max-width: 1180px) {
+  header.page-header div.header-inside h1 {
+    font-size: 48px;
+  }
+  header.page-header > img:last-of-type {
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 100%;
+  }
+
+  div.advantages div.advantage {
+    padding: 24px;
+  }
+  div.advantages div.advantage h1 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
 section.about div.about-inside {
   padding-top: 265px;
   padding-bottom: 175px;
@@ -201,6 +233,19 @@ section.about div.about-inside div.about-text button.submit-button svg {
   margin-left: 17px;
 }
 
+@media (max-width: 1180px) {
+  section.about div.about-inside {
+    padding-top: 220px;
+    column-gap: 35px;
+  }
+  section.about div.about-inside div.about-text h1 {
+    font-size: 32px;
+    line-height: 44.8px;
+  }
+  section.about div.about-inside img {
+    max-width: 100%;
+  }
+}
 section.stages div.stages-inside {
   padding-bottom: 145px;
 }
@@ -275,11 +320,28 @@ section.stages div.stages-inside ul.stages-list li:hover svg * {
   fill: #b6c8e5;
 }
 
+@media (max-width: 1180px) {
+  section.stages div.stages-inside ul.stages-list {
+    column-gap: 16px;
+  }
+  section.stages div.stages-inside ul.stages-list li {
+    padding-bottom: 184px;
+  }
+  section.stages div.stages-inside ul.stages-list li h1 {
+    font-size: 20px;
+    margin-bottom: 13px;
+  }
+  section.stages div.stages-inside ul.stages-list li svg {
+    width: 150px;
+    height: 150px;
+  }
+}
 section.submit-form {
   padding: 130px 0 120px 0;
   background-image: url("../assets/images/submit-form-clouds.png"), linear-gradient(180deg, #f1f9f9 0%, rgba(247, 250, 250, 0.62) 100%);
   background-position: top center;
   background-repeat: repeat-x;
+  background-size: cover;
 }
 section.submit-form div.submit-form-text {
   text-align: center;
@@ -331,9 +393,16 @@ section.submit-form form#submit-form div.inputs div {
   justify-content: space-between;
   align-items: center;
   height: 65px;
+  transition: all 0.3s ease-out;
 }
 section.submit-form form#submit-form div.inputs div label {
   margin-right: 18px;
+}
+section.submit-form form#submit-form div.inputs div:hover {
+  background: #fafafa;
+}
+section.submit-form form#submit-form div.inputs div:hover input {
+  background: #fafafa;
 }
 section.submit-form form#submit-form div.inputs div input {
   width: 100%;
@@ -342,14 +411,12 @@ section.submit-form form#submit-form div.inputs div input {
   font-family: "Inter Regular";
   font-size: 16px;
   transition: all 0.3s ease-in-out;
+  padding-right: 20px;
 }
 section.submit-form form#submit-form div.inputs div input::placeholder {
   color: #4f4f4f;
   font-family: "Inter Regular";
   font-size: 16px;
-}
-section.submit-form form#submit-form div.inputs div input:hover {
-  background: #fafafa;
 }
 section.submit-form form#submit-form div.inputs div input:active, section.submit-form form#submit-form div.inputs div input:focus {
   color: #32280c;
@@ -404,6 +471,13 @@ footer.page-footer div.footer-inside p {
   font-family: "Inter Regular";
   font-size: 16px;
   color: #7e8e9c;
+}
+
+@media (max-width: 1180px) {
+  .center {
+    max-width: 952px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

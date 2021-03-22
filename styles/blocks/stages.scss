@@ -75,3 +75,24 @@ section.stages {
     }
   }
 }
+
+@media (max-width: 1180px) {
+  section.stages {
+    div.stages-inside {
+      ul.stages-list {
+        column-gap: 16px;
+        li {
+          h1 {
+            font-size: 20px;
+            margin-bottom: 13px;
+          }
+          padding-bottom: 184px;
+          svg {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+}

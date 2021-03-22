@@ -40,3 +40,21 @@ section.about {
     }
   }
 }
+
+@media (max-width: 1180px) {
+  section.about {
+    div.about-inside {
+      padding-top: 220px;
+      column-gap: 35px;
+      div.about-text {
+        h1 {
+          font-size: 32px;
+          line-height: 44.8px;
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

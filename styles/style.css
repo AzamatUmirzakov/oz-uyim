@@ -4,7 +4,7 @@
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .center {
@@ -206,7 +206,7 @@ div.advantages div.advantage p {
     grid-column: 3/5;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   div.header-top {
     position: absolute;
   }
@@ -219,7 +219,8 @@ div.advantages div.advantage p {
   div.header-top div.header-top-inside nav.header-nav {
     display: none;
   }
-
+}
+@media (max-width: 480px) {
   header.page-header {
     padding-top: 210px;
   }
@@ -584,11 +585,6 @@ footer.page-footer div.footer-inside p {
   color: #7e8e9c;
 }
 
-@media (max-width: 1080px) {
-  footer.page-footer div.footer-inside {
-    padding: 18px 40px;
-  }
-}
 @media (max-width: 480px) {
   section.submit-form {
     padding: 88px 31px;

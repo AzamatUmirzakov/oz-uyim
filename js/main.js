@@ -51,3 +51,6 @@ for (let image of Array.from(
     e.preventDefault();
   });
 }
+
+document.querySelector("footer").style.padding =
+  "0px " + getComputedStyle(document.querySelector("div.center")).paddingRight;

@@ -35,7 +35,8 @@ section.submit-form {
     justify-content: center;
     align-items: center;
     div.inputs {
-      width: 420px;
+      max-width: 420px;
+      width: 100%;
       button,
       div,
       input {

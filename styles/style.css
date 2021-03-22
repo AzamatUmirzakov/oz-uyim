@@ -476,7 +476,8 @@ section.submit-form form#submit-form {
   align-items: center;
 }
 section.submit-form form#submit-form div.inputs {
-  width: 420px;
+  max-width: 420px;
+  width: 100%;
 }
 section.submit-form form#submit-form div.inputs button,
 section.submit-form form#submit-form div.inputs div,

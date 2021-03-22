@@ -120,3 +120,17 @@ section.stages {
     }
   }
 }
+
+@media (max-width: 480px) {
+  section.stages {
+    div.stages-inside {
+      ul.stages-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        li {
+          padding-bottom: 120px;
+        }
+      }
+    }
+  }
+}

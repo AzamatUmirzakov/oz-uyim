@@ -2,7 +2,12 @@ let margin = parseFloat(
   getComputedStyle(document.querySelector("div.center")).marginLeft
 );
 
-document.querySelector("header.page-header > img").style.right = margin + "px";
+if (!window.matchMedia("(max-width: 480px)").matches) {
+  document.querySelector("header.page-header > img").style.right =
+    margin + "px";
+} else {
+  document.querySelector("header.page-header > img").style.right = "calc(-50%)";
+}
 
 let advantages = document.querySelector("div.advantages");
 
@@ -24,16 +29,17 @@ if (!window.matchMedia("(max-width: 1080px)").matches) {
 }
 
 let last_scroll = 0;
-window.addEventListener("scroll", () => {
-  console.log(true);
-  if (window.pageYOffset > last_scroll) {
-    document.querySelector("div.header-top").classList.remove("active");
-    last_scroll = window.pageYOffset;
-  } else {
-    document.querySelector("div.header-top").classList.add("active");
-    last_scroll = window.pageYOffset;
-  }
-});
+if (!window.matchMedia("(max-width: 480px)").matches) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > last_scroll) {
+      document.querySelector("div.header-top").classList.remove("active");
+      last_scroll = window.pageYOffset;
+    } else {
+      document.querySelector("div.header-top").classList.add("active");
+      last_scroll = window.pageYOffset;
+    }
+  });
+}
 
 for (let image of Array.from(
   document.querySelectorAll("header.page-header > img")

@@ -88,3 +88,12 @@ section.about {
     }
   }
 }
+
+@media (max-width: 480px) {
+  section.about {
+    div.about-inside {
+      padding-top: 580px;
+      padding-bottom: 120px;
+    }
+  }
+}

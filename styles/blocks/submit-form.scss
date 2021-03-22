@@ -132,3 +132,16 @@ footer.page-footer {
     }
   }
 }
+
+@media (max-width: 480px) {
+  section.submit-form {
+    padding: 88px 0;
+    div.submit-form-text {
+      h1 {
+        font-size: 32px;
+        line-height: 44.8px;
+        margin-bottom: 29px;
+      }
+    }
+  }
+}

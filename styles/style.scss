@@ -69,3 +69,11 @@
     padding-right: 56px;
   }
 }
+
+@media (max-width: 480px) {
+  .center {
+    max-width: 100vw;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

@@ -170,3 +170,34 @@ div.advantages {
     }
   }
 }
+
+@media (max-width: 480px) {
+  div.header-top {
+    position: absolute;
+    div.header-top-inside {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      display: flex;
+      justify-content: center;
+      nav.header-nav {
+        display: none;
+      }
+    }
+  }
+  header.page-header {
+    padding-top: 210px;
+    div.header-inside {
+      h1 {
+        font-size: 36px;
+      }
+    }
+    div.advantages {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      row-gap: 20px;
+      div.advantage {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+}

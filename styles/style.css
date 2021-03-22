@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-html {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -601,6 +602,14 @@ footer.page-footer div.footer-inside p {
   }
   section.submit-form form#submit-form button svg {
     margin-left: 17px;
+  }
+
+  footer.page-footer div.footer-inside {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer.page-footer div.footer-inside img {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 1180px) {

@@ -63,7 +63,8 @@ section.submit-form {
         label {
           margin-right: 18px;
         }
-        &:hover {
+        &:hover,
+        &:active {
           background: #fafafa;
           input {
             background: #fafafa;

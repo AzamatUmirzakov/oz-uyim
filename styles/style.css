@@ -6,6 +6,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .center {
@@ -104,7 +105,8 @@ header.page-header div.header-inside > p {
   max-width: 388px;
   margin-bottom: 56px;
 }
-header.page-header div.header-inside button {
+header.page-header div.header-inside a.submit-button {
+  text-decoration: none;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -121,18 +123,18 @@ header.page-header div.header-inside button {
   outline: none;
   border-radius: 7px;
 }
-header.page-header div.header-inside button:hover {
+header.page-header div.header-inside a.submit-button:hover {
   background: #f7f7f7;
   cursor: pointer;
 }
-header.page-header div.header-inside button:active {
+header.page-header div.header-inside a.submit-button:active {
   background-color: #f0f0f0;
 }
-header.page-header div.header-inside button svg {
+header.page-header div.header-inside a.submit-button svg {
   margin-left: 10px;
   transition: all 0.3s ease-in-out;
 }
-header.page-header div.header-inside button:hover svg {
+header.page-header div.header-inside a.submit-button:hover svg {
   transform: translateX(4px);
 }
 
@@ -259,7 +261,8 @@ section.about div.about-inside div.about-text p {
   margin-bottom: 40px;
   line-height: 29px;
 }
-section.about div.about-inside div.about-text button.submit-button {
+section.about div.about-inside div.about-text a.submit-button {
+  text-decoration: none;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -277,17 +280,17 @@ section.about div.about-inside div.about-text button.submit-button {
   border-radius: 7px;
   color: #32280c;
 }
-section.about div.about-inside div.about-text button.submit-button:hover {
+section.about div.about-inside div.about-text a.submit-button:hover {
   background: #f7bb08;
   cursor: pointer;
 }
-section.about div.about-inside div.about-text button.submit-button:hover svg {
+section.about div.about-inside div.about-text a.submit-button:hover svg {
   transform: translateX(4px);
 }
-section.about div.about-inside div.about-text button.submit-button:active {
+section.about div.about-inside div.about-text a.submit-button:active {
   background-color: #f4b701;
 }
-section.about div.about-inside div.about-text button.submit-button svg {
+section.about div.about-inside div.about-text a.submit-button svg {
   transition: all 0.3s ease-in-out;
   margin-left: 17px;
 }
@@ -510,10 +513,10 @@ section.submit-form form#submit-form div.inputs div {
 section.submit-form form#submit-form div.inputs div label {
   margin-right: 18px;
 }
-section.submit-form form#submit-form div.inputs div:hover {
+section.submit-form form#submit-form div.inputs div:hover, section.submit-form form#submit-form div.inputs div:active {
   background: #fafafa;
 }
-section.submit-form form#submit-form div.inputs div:hover input {
+section.submit-form form#submit-form div.inputs div:hover input, section.submit-form form#submit-form div.inputs div:active input {
   background: #fafafa;
 }
 section.submit-form form#submit-form div.inputs div input {

@@ -21,7 +21,8 @@ section.about {
         margin-bottom: 40px;
         line-height: 29px;
       }
-      button.submit-button {
+      a.submit-button {
+        text-decoration: none;
         @include submit-button(#fbc73b, #f7bb08, 24px, 21px);
         color: #32280c;
         &:hover {

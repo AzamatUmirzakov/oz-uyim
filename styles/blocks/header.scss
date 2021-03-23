@@ -73,7 +73,8 @@ header.page-header {
       max-width: 388px;
       margin-bottom: 56px;
     }
-    button {
+    a.submit-button {
+      text-decoration: none;
       @include submit-button(#fff, #f7f7f7, 24px, 16px);
       &:active {
         background-color: #f0f0f0;

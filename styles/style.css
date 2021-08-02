@@ -331,122 +331,105 @@ section.about div.about-inside div.about-text a.submit-button svg {
     padding-bottom: 120px;
   }
 }
-section.stages div.stages-inside {
-  padding-bottom: 145px;
-}
-section.stages div.stages-inside > svg {
-  display: none;
-}
-section.stages div.stages-inside header {
-  text-align: center;
-  max-width: 767px;
-  margin: 0 auto;
-  margin-bottom: 72px;
-}
-section.stages div.stages-inside header h1 {
-  font-family: "Inter Bold";
-  font-size: 40px;
-  line-height: 56px;
-  color: #001f3c;
-  font-weight: normal;
-}
-section.stages div.stages-inside ul.stages-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
-}
-section.stages div.stages-inside ul.stages-list li {
-  overflow: hidden;
-  display: inline-block;
-  padding: 32px;
-  padding-bottom: 205px;
-  border: 1px solid #ebebeb;
-  border-radius: 12px;
+.how-it-works-wrapper {
   position: relative;
-  transition: all 0.3s ease-in-out;
-  width: auto;
-  height: auto;
-}
-section.stages div.stages-inside ul.stages-list li p.stage-index {
-  font-family: "Inter Bold";
-  margin-bottom: 8px;
-  color: #3886ce;
-  font-size: 16px;
-  height: auto;
-}
-section.stages div.stages-inside ul.stages-list li h1 {
-  color: #001f3b;
-  font-family: "Inter Bold";
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-section.stages div.stages-inside ul.stages-list li p.description {
-  color: #001f3b;
-  opacity: 0.5;
-  font-family: "Inter Regular";
-  font-size: 15px;
-}
-section.stages div.stages-inside ul.stages-list li > svg {
-  width: 180px;
-  height: 180px;
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-}
-section.stages div.stages-inside ul.stages-list li > svg * {
-  transition: all 0.3s ease-in-out;
-}
-section.stages div.stages-inside ul.stages-list li:hover {
-  background: #f1f7f9;
-  border-color: transparent;
-}
-section.stages div.stages-inside ul.stages-list li:hover svg * {
-  fill: #b6c8e5;
+  width: 100%;
 }
 
-@media (max-width: 1180px) {
-  section.stages div.stages-inside ul.stages-list {
-    column-gap: 16px;
-  }
-  section.stages div.stages-inside ul.stages-list li {
-    padding-bottom: 184px;
-  }
-  section.stages div.stages-inside ul.stages-list li h1 {
-    font-size: 20px;
-    margin-bottom: 13px;
-  }
-  section.stages div.stages-inside ul.stages-list li svg {
-    width: 150px;
-    height: 150px;
-  }
+.how-it-works {
+  min-height: 100vh;
+  background-color: #F1F7F9;
 }
-@media (max-width: 1080px) {
-  section.stages div.stages-inside header h1 {
-    margin-bottom: 72px;
-  }
-  section.stages div.stages-inside ul.stages-list {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-  section.stages div.stages-inside ul.stages-list li {
-    padding-bottom: 210px;
-  }
-  section.stages div.stages-inside ul.stages-list li p {
-    max-width: 70%;
-  }
+.how-it-works.animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
-@media (max-width: 480px) {
-  section.stages div.stages-inside ul.stages-list {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  section.stages div.stages-inside ul.stages-list li {
-    padding-bottom: 120px;
-  }
+.how-it-works.animation-end {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
+.how-it-works .how-it-works-inside {
+  padding-top: 88px;
+  padding-bottom: 105px;
+}
+.how-it-works .how-it-works-inside header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.how-it-works .how-it-works-inside header h1 {
+  font-family: "Inter Bold";
+  color: #001F3B;
+  font-size: 52px;
+  margin-bottom: 40px;
+}
+.how-it-works .how-it-works-inside header .header-buttons {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.07);
+}
+.how-it-works .how-it-works-inside header .header-buttons button {
+  background: #fff;
+  cursor: pointer;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  padding: 10px 72px;
+  font-family: "Inter Regular";
+  color: #32280C;
+  font-size: 16px;
+  font-weight: 600;
+}
+.how-it-works .how-it-works-inside header .header-buttons button.active {
+  background: #FBC73B;
+}
+.how-it-works .how-it-works-inside .steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.how-it-works .how-it-works-inside .steps .steps-list {
+  max-width: 45%;
+  list-style: none;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step:not(:last-child) {
+  margin-bottom: 48px;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-number {
+  margin-bottom: 12px;
+  color: #3886CE;
+  font-size: 24px;
+  font-family: "Inter Bold";
+  font-weight: 800;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
+  font-family: "Inter Semibold";
+  font-size: 36px;
+  color: #001F3B;
+  margin-bottom: 8px;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-description p {
+  font-family: "Inter Medium";
+  font-size: 18px;
+  color: #001f3b;
+  opacity: 0.5;
+}
+
 section.submit-form {
   padding: 130px 0 120px 0;
   background-image: url("../assets/images/submit-form-clouds.png"), linear-gradient(180deg, #f1f9f9 0%, rgba(247, 250, 250, 0.62) 100%);

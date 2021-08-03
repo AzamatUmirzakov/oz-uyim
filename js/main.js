@@ -156,7 +156,7 @@ function adaptive() {
     document.querySelectorAll("li.step")
   ).length;
   wrapper.style.height =
-    Math.round(
+    Math.ceil(
       parseFloat(how_it_works.offsetHeight) +
         configuration.steps_number * configuration.steps_interval
     ) + "px";

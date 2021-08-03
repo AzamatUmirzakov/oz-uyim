@@ -151,11 +151,6 @@ function toggleStep(index) {
 }
 
 function adaptive() {
-  const how_it_works = document.querySelector(".how-it-works");
-  wrapper.style.height =
-    parseFloat(how_it_works.offsetHeight) +
-    configuration.steps_number * configuration.steps_interval +
-    "px";
   if (window.matchMedia("(max-height: 920px)").matches) {
     let header = how_it_works.querySelector("header h1");
     state.start_point =

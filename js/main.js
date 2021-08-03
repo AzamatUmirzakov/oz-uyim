@@ -1,8 +1,27 @@
+// блок "Как это работает"
+
+const wrapper = document.querySelector(".how-it-works-wrapper");
+const how_it_works = document.querySelector(".how-it-works");
+
+const configuration = {
+  steps_number: Array.from(document.querySelectorAll("li.step")).length,
+  steps_interval: 200,
+};
 let state = {
   how_it_works_animating: false,
-}
+  start_point: 0,
+};
 
 function adaptive() {
+  if (window.matchMedia("(max-height: 920px)").matches) {
+    let header = how_it_works.querySelector("header h1");
+    state.start_point =
+      header.offsetHeight +
+      parseFloat(getComputedStyle(header).marginBottom) +
+      parseFloat(
+        getComputedStyle(header.parentElement.parentElement).paddingTop
+      );
+  }
   let margin = parseFloat(
     getComputedStyle(document.querySelector("div.center")).marginLeft
   );
@@ -70,59 +89,73 @@ setInterval(() => {
   adaptive();
 }, 100);
 
-// блок "Как это работает"
-
-const wrapper = document.querySelector('.how-it-works-wrapper');
-const how_it_works = document.querySelector('.how-it-works');
-
-const configuration = {
-  steps_number: Array.from(document.querySelectorAll('li.step')).length,
-  steps_interval: 200,
-}
-
-wrapper.style.height = parseFloat(getComputedStyle(how_it_works).height) + (configuration.steps_number * configuration.steps_interval) + "px";
-
+wrapper.style.height =
+  parseFloat(how_it_works.offsetHeight) +
+  configuration.steps_number * configuration.steps_interval +
+  state.start_point +
+  "px";
 
 const check_scroll = () => {
-  if (wrapper.getBoundingClientRect().top <= 0) {
-    how_it_works.classList.remove('animation-end');
-    how_it_works.classList.add('animation');
+  if (wrapper.getBoundingClientRect().top <= -state.start_point) {
+    // how_it_works.parentElement.style.top = "";
+    // how_it_works.style.bottom = "";
+    how_it_works.classList.remove("animation-end");
+    how_it_works.classList.add("animation");
+    how_it_works.style.top = -state.start_point + "px";
+    how_it_works.style.minHeight = `calc(100vh + ${state.start_point}px)`;
     state.how_it_works_animating = true;
-    if (wrapper.getBoundingClientRect().bottom <= document.documentElement.clientHeight) {
-      how_it_works.classList.remove('animation');
-      how_it_works.classList.add('animation-end');
+    console.log(wrapper.getBoundingClientRect().bottom);
+    if (
+      wrapper.getBoundingClientRect().bottom <=
+      how_it_works.getBoundingClientRect().bottom
+    ) {
+      how_it_works.style.top = "";
+      how_it_works.classList.remove("animation");
+      how_it_works.classList.add("animation-end");
+      // how_it_works.style.bottom = state.start_point + "px";
+      // how_it_works.parentElement.style.top = -state.start_point + "px";
     } else {
       switch_steps();
     }
   } else {
-    how_it_works.classList.remove('animation');
-    how_it_works.classList.remove('animation-end');
+    how_it_works.classList.remove("animation");
+    how_it_works.classList.remove("animation-end");
     state.how_it_works_animating = false;
   }
-}
+};
 
 const switch_steps = () => {
-  let current_scroll = wrapper.getBoundingClientRect().top;
+  let current_scroll = wrapper.getBoundingClientRect().top + state.start_point;
   if (current_scroll < 0) {
     current_scroll = Math.abs(current_scroll);
     toggleStep(Math.floor(current_scroll / configuration.steps_interval));
   }
-}
+};
 
-window.addEventListener('scroll', check_scroll)
+window.addEventListener("scroll", check_scroll);
 check_scroll();
 
 function toggleStep(index) {
-  for (let step of Array.from(document.querySelectorAll('.step'))) {
-    step.classList.remove('open');
-    step.querySelector('.step-description').style.maxHeight = '0';
+  if (
+    index < 0 ||
+    index > Array.from(document.querySelectorAll(".step")).length - 1
+  ) {
+    return false;
   }
-  const step = Array.from(document.querySelectorAll('.step'))[index];
-  step.classList.toggle('open');
-  let maxHeight = 0;
-  // debugger;
-  for (let child of step.querySelector('.step-description').children) {
-    maxHeight += parseFloat(getComputedStyle(child).height);
+  for (let step of Array.from(document.querySelectorAll(".step"))) {
+    step.classList.remove("open");
+    if (!window.matchMedia("(max-width: 480px)").matches) {
+      step.querySelector(".step-description").style.maxHeight = "0";
+    }
   }
-  step.querySelector('.step-description').style.maxHeight = maxHeight + "px";
+  const step = Array.from(document.querySelectorAll(".step"))[index];
+  step.classList.toggle("open");
+  if (!window.matchMedia("(max-width: 480px)").matches) {
+    let maxHeight = 0;
+    // debugger;
+    for (let child of step.querySelector(".step-description").children) {
+      maxHeight += parseFloat(getComputedStyle(child).height);
+    }
+    step.querySelector(".step-description").style.maxHeight = maxHeight + "px";
+  }
 }

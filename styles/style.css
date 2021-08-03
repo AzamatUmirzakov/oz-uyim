@@ -333,12 +333,11 @@ section.about div.about-inside div.about-text a.submit-button svg {
 }
 .how-it-works-wrapper {
   position: relative;
-  width: 100%;
 }
 
 .how-it-works {
   min-height: 100vh;
-  background-color: #F1F7F9;
+  background-color: #f1f7f9;
 }
 .how-it-works.animation {
   position: fixed;
@@ -365,7 +364,7 @@ section.about div.about-inside div.about-text a.submit-button svg {
 }
 .how-it-works .how-it-works-inside header h1 {
   font-family: "Inter Bold";
-  color: #001F3B;
+  color: #001f3b;
   font-size: 52px;
   margin-bottom: 40px;
 }
@@ -386,12 +385,12 @@ section.about div.about-inside div.about-text a.submit-button svg {
   outline: none;
   padding: 10px 72px;
   font-family: "Inter Regular";
-  color: #32280C;
+  color: #32280c;
   font-size: 16px;
   font-weight: 600;
 }
 .how-it-works .how-it-works-inside header .header-buttons button.active {
-  background: #FBC73B;
+  background: #fbc73b;
 }
 .how-it-works .how-it-works-inside .steps {
   display: flex;
@@ -407,7 +406,7 @@ section.about div.about-inside div.about-text a.submit-button svg {
 }
 .how-it-works .how-it-works-inside .steps .steps-list .step .step-number {
   margin-bottom: 12px;
-  color: #3886CE;
+  color: #3886ce;
   font-size: 24px;
   font-family: "Inter Bold";
   font-weight: 800;
@@ -415,7 +414,7 @@ section.about div.about-inside div.about-text a.submit-button svg {
 .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
   font-family: "Inter Semibold";
   font-size: 36px;
-  color: #001F3B;
+  color: #001f3b;
   margin-bottom: 8px;
 }
 .how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
@@ -430,6 +429,39 @@ section.about div.about-inside div.about-text a.submit-button svg {
   opacity: 0.5;
 }
 
+@media (max-width: 1080px) {
+  .how-it-works-wrapper .how-it-works .center {
+    max-width: 952px;
+  }
+}
+@media (max-width: 480px) {
+  .how-it-works-wrapper .how-it-works .center {
+    max-width: 400px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside header h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps {
+    flex-direction: column;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list {
+    max-width: 100%;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step {
+    display: none;
+    margin-bottom: 32px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
+    max-height: max-content;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step.open {
+    display: block;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step:last-child {
+    margin-bottom: 32px;
+  }
+}
 section.submit-form {
   padding: 130px 0 120px 0;
   background-image: url("../assets/images/submit-form-clouds.png"), linear-gradient(180deg, #f1f9f9 0%, rgba(247, 250, 250, 0.62) 100%);

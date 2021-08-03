@@ -1,6 +1,5 @@
 .how-it-works-wrapper {
   position: relative;
-  width: 100%;
 }
 
 .how-it-works {
@@ -18,7 +17,7 @@
     left: 0;
     width: 100%;
   }
-  background-color: #F1F7F9;
+  background-color: #f1f7f9;
   .how-it-works-inside {
     padding-top: 88px;
     padding-bottom: 105px;
@@ -29,7 +28,7 @@
       margin-bottom: 80px;
       h1 {
         font-family: "Inter Bold";
-        color: #001F3B;
+        color: #001f3b;
         font-size: 52px;
         margin-bottom: 40px;
       }
@@ -40,7 +39,8 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.07);
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05),
+          0px 1px 4px rgba(0, 0, 0, 0.07);
         button {
           background: #fff;
           cursor: pointer;
@@ -49,11 +49,11 @@
           outline: none;
           padding: 10px 72px;
           font-family: "Inter Regular";
-          color: #32280C;
+          color: #32280c;
           font-size: 16px;
           font-weight: 600;
           &.active {
-            background: #FBC73B;
+            background: #fbc73b;
           }
         }
       }
@@ -71,7 +71,7 @@
           }
           .step-number {
             margin-bottom: 12px;
-            color: #3886CE;
+            color: #3886ce;
             font-size: 24px;
             font-family: "Inter Bold";
             font-weight: 800;
@@ -79,7 +79,7 @@
           .step-name {
             font-family: "Inter Semibold";
             font-size: 36px;
-            color: #001F3B;
+            color: #001f3b;
             margin-bottom: 8px;
           }
           .step-description {
@@ -91,6 +91,53 @@
               font-size: 18px;
               color: #001f3b;
               opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .how-it-works-wrapper {
+    .how-it-works {
+      .center {
+        max-width: 952px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works-wrapper {
+    .how-it-works {
+      .center {
+        max-width: 400px;
+      }
+      .how-it-works-inside {
+        header {
+          h1 {
+            font-size: 36px;
+            text-align: center;
+          }
+        }
+        .steps {
+          flex-direction: column;
+          .steps-list {
+            max-width: 100%;
+            .step {
+              .step-description {
+                max-height: max-content;
+              }
+              &.open {
+                display: block;
+              }
+              display: none;
+              &:last-child {
+                margin-bottom: 32px;
+              }
+              margin-bottom: 32px;
             }
           }
         }

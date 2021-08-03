@@ -116,13 +116,19 @@ window.addEventListener("scroll", check_scroll);
 check_scroll();
 
 function toggleStep(index) {
-  if (index < 0) {
-    index = 0;
-  } else if (
-    index >
-    Array.from(document.querySelectorAll(".step")).length - 1
+  // if (index < 0) {
+  //   index = 0;
+  // } else if (
+  //   index >
+  //   Array.from(document.querySelectorAll(".step")).length - 1
+  // ) {
+  //   index = Array.from(document.querySelectorAll(".step")).length - 1;
+  // }
+  if (
+    index < 0 ||
+    index > Array.from(document.querySelectorAll(".step")).length - 1
   ) {
-    index = Array.from(document.querySelectorAll(".step")).length - 1;
+    return false;
   }
   for (let step of Array.from(document.querySelectorAll(".step"))) {
     step.classList.remove("open");

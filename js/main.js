@@ -152,6 +152,9 @@ function toggleStep(index) {
 
 function adaptive() {
   const how_it_works = document.querySelector(".how-it-works");
+  configuration.steps_number = Array.from(
+    document.querySelectorAll("li.step")
+  ).length;
   wrapper.style.height =
     Math.round(
       parseFloat(how_it_works.offsetHeight) +

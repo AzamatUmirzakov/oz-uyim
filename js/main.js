@@ -74,7 +74,7 @@ adaptive();
 
 setInterval(() => {
   adaptive();
-}, 100);
+}, 1000);
 
 const check_scroll = () => {
   const how_it_works = document.querySelector(".how-it-works");

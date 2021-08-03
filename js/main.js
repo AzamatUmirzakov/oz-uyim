@@ -102,7 +102,7 @@ const check_scroll = () => {
     how_it_works.classList.remove("animation-end");
     how_it_works.classList.add("animation");
     how_it_works.style.top = -state.start_point + "px";
-    how_it_works.style.minHeight = `calc(100vh + ${state.start_point}px)`;
+    how_it_works.style.height = `calc(100vh + ${state.start_point}px)`;
     state.how_it_works_animating = true;
     console.log(wrapper.getBoundingClientRect().bottom);
     if (

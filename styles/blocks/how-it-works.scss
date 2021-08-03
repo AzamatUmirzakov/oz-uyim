@@ -3,7 +3,8 @@
 }
 
 .how-it-works {
-  min-height: 100vh;
+  height: 100vh;
+  box-sizing: border-box;
   &.animation {
     position: fixed;
     top: 0;

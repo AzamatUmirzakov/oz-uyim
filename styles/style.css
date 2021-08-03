@@ -336,7 +336,8 @@ section.about div.about-inside div.about-text a.submit-button svg {
 }
 
 .how-it-works {
-  min-height: 100vh;
+  height: 100vh;
+  box-sizing: border-box;
   background-color: #f1f7f9;
 }
 .how-it-works.animation {

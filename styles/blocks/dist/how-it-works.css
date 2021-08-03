@@ -1,0 +1,167 @@
+.how-it-works-wrapper {
+  position: relative;
+}
+
+.how-it-works {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #f1f7f9;
+}
+.how-it-works.animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.how-it-works.animation-end {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.how-it-works .how-it-works-inside {
+  padding-top: 88px;
+  padding-bottom: 105px;
+}
+.how-it-works .how-it-works-inside header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.how-it-works .how-it-works-inside header h1 {
+  font-family: "Inter Bold";
+  color: #001f3b;
+  font-size: 52px;
+  margin-bottom: 40px;
+}
+.how-it-works .how-it-works-inside header .header-buttons {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.07);
+}
+.how-it-works .how-it-works-inside header .header-buttons button {
+  background: #fff;
+  cursor: pointer;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  padding: 10px 72px;
+  font-family: "Inter Regular";
+  color: #32280c;
+  font-size: 16px;
+  font-weight: 600;
+}
+.how-it-works .how-it-works-inside header .header-buttons button.active {
+  background: #fbc73b;
+}
+.how-it-works .how-it-works-inside .steps {
+  height: calc(100vh - 150px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.how-it-works .how-it-works-inside .steps .steps-list {
+  max-height: 100%;
+  align-self: center;
+  list-style: none;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step.open .step-number {
+  opacity: 1;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step.open .step-name {
+  opacity: 1;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step:not(:last-child) {
+  margin-bottom: 48px;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-number {
+  margin-bottom: 12px;
+  color: #3886ce;
+  font-size: 24px;
+  font-family: "Inter Bold";
+  font-weight: 800;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
+  font-family: "Inter Semibold";
+  font-size: 36px;
+  color: #001f3b;
+  margin-bottom: 8px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step .step-description p {
+  font-family: "Inter Medium";
+  font-size: 18px;
+  color: #001f3b;
+  opacity: 0.5;
+}
+.how-it-works .how-it-works-inside .steps .step-image {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 0;
+}
+.how-it-works .how-it-works-inside .steps .step-image img {
+  max-height: 100%;
+}
+
+@media (max-width: 1080px) {
+  .how-it-works-wrapper .how-it-works .center {
+    max-width: 952px;
+  }
+}
+@media (max-width: 800px) {
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
+    font-size: 28px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-description p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 750px) {
+  .how-it-works-wrapper .how-it-works .center {
+    max-width: 400px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside header h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps {
+    grid-template-columns: 1fr;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list {
+    max-width: 100%;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step {
+    display: none;
+    margin-bottom: 32px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
+    max-height: max-content;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step.open {
+    display: block;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step:last-child {
+    margin-bottom: 32px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image {
+    height: calc(100vh - 300px);
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image img {
+    max-width: 100%;
+  }
+}

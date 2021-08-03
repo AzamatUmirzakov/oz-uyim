@@ -60,13 +60,25 @@
       }
     }
     .steps {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      height: calc(100vh - 150px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      // &.sell-steps {
+      //   display: none;
+      // }
       .steps-list {
-        max-width: 45%;
+        max-height: 100%;
+        align-self: center;
         list-style: none;
         .step {
+          &.open {
+            .step-number {
+              opacity: 1;
+            }
+            .step-name {
+              opacity: 1;
+            }
+          }
           &:not(:last-child) {
             margin-bottom: 48px;
           }
@@ -76,12 +88,16 @@
             font-size: 24px;
             font-family: "Inter Bold";
             font-weight: 800;
+            opacity: 0.7;
+            transition: opacity 0.3s ease-in-out;
           }
           .step-name {
             font-family: "Inter Semibold";
             font-size: 36px;
             color: #001f3b;
             margin-bottom: 8px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease-in-out;
           }
           .step-description {
             transition: all 0.3s ease-in-out;
@@ -94,6 +110,17 @@
               opacity: 0.5;
             }
           }
+        }
+      }
+      .step-image {
+        // flex: 1 0.5 auto;
+        height: calc(100vh - 150px);
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
+        font-size: 0;
+        img {
+          max-height: 100%;
         }
       }
     }
@@ -110,7 +137,30 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
+  .how-it-works-wrapper {
+    .how-it-works {
+      .how-it-works-inside {
+        .steps {
+          .steps-list {
+            .step {
+              .step-name {
+                font-size: 28px;
+              }
+              .step-description {
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
   .how-it-works-wrapper {
     .how-it-works {
       .center {
@@ -124,7 +174,7 @@
           }
         }
         .steps {
-          flex-direction: column;
+          grid-template-columns: 1fr;
           .steps-list {
             max-width: 100%;
             .step {
@@ -139,6 +189,12 @@
                 margin-bottom: 32px;
               }
               margin-bottom: 32px;
+            }
+          }
+          .step-image {
+            height: calc(100vh - 300px);
+            img {
+              max-width: 100%;
             }
           }
         }

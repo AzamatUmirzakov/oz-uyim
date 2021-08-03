@@ -394,13 +394,20 @@ section.about div.about-inside div.about-text a.submit-button svg {
   background: #fbc73b;
 }
 .how-it-works .how-it-works-inside .steps {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: calc(100vh - 150px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .how-it-works .how-it-works-inside .steps .steps-list {
-  max-width: 45%;
+  max-height: 100%;
+  align-self: center;
   list-style: none;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step.open .step-number {
+  opacity: 1;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step.open .step-name {
+  opacity: 1;
 }
 .how-it-works .how-it-works-inside .steps .steps-list .step:not(:last-child) {
   margin-bottom: 48px;
@@ -411,12 +418,16 @@ section.about div.about-inside div.about-text a.submit-button svg {
   font-size: 24px;
   font-family: "Inter Bold";
   font-weight: 800;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
 }
 .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
   font-family: "Inter Semibold";
   font-size: 36px;
   color: #001f3b;
   margin-bottom: 8px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
 }
 .how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
   transition: all 0.3s ease-in-out;
@@ -429,13 +440,31 @@ section.about div.about-inside div.about-text a.submit-button svg {
   color: #001f3b;
   opacity: 0.5;
 }
+.how-it-works .how-it-works-inside .steps .step-image {
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 0;
+}
+.how-it-works .how-it-works-inside .steps .step-image img {
+  max-height: 100%;
+}
 
 @media (max-width: 1080px) {
   .how-it-works-wrapper .how-it-works .center {
     max-width: 952px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 800px) {
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
+    font-size: 28px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-description p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 750px) {
   .how-it-works-wrapper .how-it-works .center {
     max-width: 400px;
   }
@@ -444,7 +473,7 @@ section.about div.about-inside div.about-text a.submit-button svg {
     text-align: center;
   }
   .how-it-works-wrapper .how-it-works .how-it-works-inside .steps {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
   .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list {
     max-width: 100%;
@@ -461,6 +490,12 @@ section.about div.about-inside div.about-text a.submit-button svg {
   }
   .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step:last-child {
     margin-bottom: 32px;
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image {
+    height: calc(100vh - 300px);
+  }
+  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image img {
+    max-width: 100%;
   }
 }
 section.submit-form {

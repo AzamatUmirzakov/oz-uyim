@@ -12,6 +12,10 @@ let state = {
   current: "buy",
 };
 
+wrapper.onload = () => {
+  changeGuide(state.current);
+};
+
 const configuration = {
   steps_number: Array.from(document.querySelectorAll("li.step")).length,
   steps_interval: 200,
@@ -72,13 +76,9 @@ function changeGuide(guide) {
 
 adaptive();
 
-let interval = 1000;
-if (window.matchMedia("(max-width: 480px)")) {
-  interval = 2000;
-}
 setInterval(() => {
   adaptive();
-}, interval);
+}, 1000);
 
 const check_scroll = () => {
   const how_it_works = document.querySelector(".how-it-works");

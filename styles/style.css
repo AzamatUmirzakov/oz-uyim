@@ -538,9 +538,11 @@ section.about div.about-inside div.about-text a.submit-button svg {
     margin-bottom: 32px;
   }
   .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image {
-    max-height: 50vh;
+    max-width: 100%;
+    height: calc(100vh - 350px);
   }
   .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image img {
+    max-height: 100%;
     width: 100%;
   }
 }

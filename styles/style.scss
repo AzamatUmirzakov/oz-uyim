@@ -14,6 +14,13 @@ body {
   margin: 0 auto;
 }
 
+a.logo {
+  max-width: 135px;
+  img {
+    max-width: 100%;
+  }
+}
+
 @mixin submit-button($background, $hover-background, $pl, $pr) {
   display: inline-flex;
   justify-content: space-between;
@@ -60,6 +67,7 @@ body {
 @import "blocks/about.scss";
 @import "blocks/how-it-works.scss";
 @import "blocks/submit-form.scss";
+@import "blocks/install-now.scss";
 
 @media (max-width: 1180px) {
   .center {

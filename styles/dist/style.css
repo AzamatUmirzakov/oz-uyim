@@ -37,20 +37,12 @@ a.logo img {
   font-family: "Inter Medium";
   src: url("../assets/fonts/Inter-Medium.ttf");
 }
-.header-house {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  max-width: 70vw;
-}
-
 div.header-top {
   z-index: 12;
   position: fixed;
   width: 100vw;
   background: #fff;
-  top: -150px;
+  top: 0;
   left: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -88,6 +80,12 @@ header.page-header {
   background-size: cover;
   padding-top: 260px;
   padding-bottom: 300px;
+}
+header.page-header > img:first-of-type {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 header.page-header > img:last-of-type {
   position: absolute;
@@ -153,7 +151,7 @@ div.advantages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 24px;
-  z-index: 10;
+  z-index: 2;
 }
 div.advantages div.advantage {
   background: #fff;
@@ -178,6 +176,12 @@ div.advantages div.advantage p {
 @media (max-width: 1180px) {
   header.page-header div.header-inside h1 {
     font-size: 48px;
+  }
+  header.page-header > img:last-of-type {
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 100%;
   }
 
   div.advantages div.advantage {
@@ -242,43 +246,6 @@ div.advantages div.advantage p {
     grid-column: 1/2;
   }
 }
-.about-img-wrap {
-  display: inline-block;
-  position: relative;
-}
-.about-img-wrap img {
-  position: relative;
-  z-index: 10;
-  border-radius: 26px;
-}
-.about-img-wrap::before {
-  content: "";
-  display: block;
-  width: 462px;
-  height: 582px;
-  background: #579bff;
-  position: absolute;
-  top: -31px;
-  left: -51px;
-  z-index: 5;
-  filter: blur(132px);
-  opacity: 0.12;
-  border-radius: 50%;
-}
-.about-img-wrap::after {
-  content: "";
-  display: block;
-  width: 364px;
-  height: 400px;
-  position: absolute;
-  top: -30px;
-  right: -73px;
-  background: #ff9957;
-  opacity: 0.12;
-  border-radius: 50%;
-  filter: blur(132px);
-}
-
 section.about div.about-inside {
   padding-top: 265px;
   padding-bottom: 175px;
@@ -354,12 +321,6 @@ section.about div.about-inside div.about-text a.submit-button svg {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  section.about div.about-inside .about-img-wrap {
-    width: 100%;
-  }
-  section.about div.about-inside .about-img-wrap img {
-    width: 100%;
   }
   section.about div.about-inside div.about-text {
     order: 2;
@@ -807,5 +768,3 @@ footer.page-footer div.footer-inside p {
     padding-right: 24px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

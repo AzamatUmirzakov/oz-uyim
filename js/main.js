@@ -91,6 +91,7 @@ const check_scroll = () => {
     how_it_works.style.top = -state.start_point + "px";
     how_it_works.style.height = `calc(100vh + ${state.start_point}px)`;
     state.how_it_works_animating = true;
+    document.querySelector(".header-top").classList.remove("active");
     if (
       wrapper.getBoundingClientRect().bottom <=
       how_it_works.getBoundingClientRect().bottom
@@ -98,6 +99,7 @@ const check_scroll = () => {
       how_it_works.style.top = "";
       how_it_works.classList.remove("animation");
       how_it_works.classList.add("animation-end");
+      document.querySelector(".header-top").classList.add("active");
       // how_it_works.style.bottom = state.start_point + "px";
       // how_it_works.parentElement.style.top = -state.start_point + "px";
     }
@@ -105,6 +107,7 @@ const check_scroll = () => {
     how_it_works.classList.remove("animation");
     how_it_works.classList.remove("animation-end");
     state.how_it_works_animating = false;
+    document.querySelector(".header-top").classList.add("active");
   }
   switch_steps();
 };
@@ -121,20 +124,20 @@ window.addEventListener("scroll", check_scroll);
 check_scroll();
 
 function toggleStep(index) {
-  // if (index < 0) {
-  //   index = 0;
-  // } else if (
-  //   index >
-  //   Array.from(document.querySelectorAll(".step")).length - 1
-  // ) {
-  //   index = Array.from(document.querySelectorAll(".step")).length - 1;
-  // }
-  if (
-    index < 0 ||
-    index > Array.from(document.querySelectorAll(".step")).length - 1
+  if (index < 0) {
+    index = 0;
+  } else if (
+    index >
+    Array.from(document.querySelectorAll(".step")).length - 1
   ) {
-    return false;
+    index = Array.from(document.querySelectorAll(".step")).length - 1;
   }
+  // if (
+  //   index < 0 ||
+  //   index > Array.from(document.querySelectorAll(".step")).length - 1
+  // ) {
+  //   return false;
+  // }
   for (let step of Array.from(document.querySelectorAll(".step"))) {
     step.classList.remove("open");
     if (!window.matchMedia("(max-width: 750px)").matches) {
@@ -174,13 +177,13 @@ function adaptive() {
       getComputedStyle(document.querySelector("div.center")).paddingLeft
     );
   }
-  if (!window.matchMedia("(max-width: 750px)").matches) {
-    document.querySelector("header.page-header > img").style.right =
-      margin + "px";
-  } else {
-    document.querySelector("header.page-header > img").style.right =
-      "calc(-50%)";
-  }
+  // if (!window.matchMedia("(max-width: 750px)").matches) {
+  //   document.querySelector("header.page-header > img").style.right =
+  //     margin + "px";
+  // } else {
+  //   document.querySelector("header.page-header > img").style.right =
+  //     "calc(-50%)";
+  // }
 
   let advantages = document.querySelector("div.advantages");
 
@@ -197,20 +200,20 @@ function adaptive() {
     }px`;
   }
 
-  let last_scroll = 0;
-  if (!window.matchMedia("(max-width: 750px)").matches) {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > last_scroll) {
-        document.querySelector("div.header-top").classList.remove("active");
-        last_scroll = window.pageYOffset;
-      } else {
-        if (!state.how_it_works_animating) {
-          document.querySelector("div.header-top").classList.add("active");
-          last_scroll = window.pageYOffset;
-        }
-      }
-    });
-  }
+  // let last_scroll = 0;
+  // if (!window.matchMedia("(max-width: 750px)").matches) {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.pageYOffset > last_scroll) {
+  //       document.querySelector("div.header-top").classList.remove("active");
+  //       last_scroll = window.pageYOffset;
+  //     } else {
+  //       if (!state.how_it_works_animating) {
+  //         document.querySelector("div.header-top").classList.add("active");
+  //         last_scroll = window.pageYOffset;
+  //       }
+  //     }
+  //   });
+  // }
 
   for (let image of Array.from(
     document.querySelectorAll("header.page-header > img")

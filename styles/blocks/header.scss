@@ -1,11 +1,19 @@
 $header-nav-color: #001f3b;
 
+.header-house {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  max-width: 70vw;
+}
+
 div.header-top {
   z-index: 12;
   position: fixed;
   width: 100vw;
   background: #fff;
-  top: -100px;
+  top: -150px;
   left: 0;
   transition: all 0.3s ease-in-out;
   div.header-top-inside {
@@ -37,12 +45,12 @@ div.header-top.active {
 
 header.page-header {
   position: relative;
-  & > img:first-of-type {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-  }
+  // & > img:first-of-type {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   z-index: 2;
+  // }
   & > img:last-of-type {
     position: absolute;
     right: 0;
@@ -98,7 +106,7 @@ div.advantages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 24px;
-  z-index: 2;
+  z-index: 10;
   div.advantage {
     background: #fff;
     border-radius: 12px;
@@ -128,12 +136,12 @@ div.advantages {
         font-size: 48px;
       }
     }
-    & > img:last-of-type {
-      position: absolute;
-      right: 0;
-      bottom: -50px;
-      width: 100%;
-    }
+    // & > img:last-of-type {
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: -50px;
+    //   width: 100%;
+    // }
   }
   div.advantages {
     div.advantage {

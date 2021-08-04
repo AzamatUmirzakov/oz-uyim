@@ -1,0 +1,75 @@
+.install-now {
+  background: #fbc73b;
+}
+.install-now .install-now-inside {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.install-now .install-now-inside .install-text {
+  max-width: 565px;
+}
+.install-now .install-now-inside .install-text h1 {
+  font-size: 52px;
+  font-family: "Inter Bold";
+  line-height: 135%;
+}
+.install-now .install-now-inside .install-images {
+  width: 415px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1080px) {
+  .install-now .install-now-inside .install-images {
+    flex-direction: column;
+  }
+  .install-now .install-now-inside .install-images img:not(:last-of-type) {
+    margin-bottom: 33px;
+  }
+}
+@media (max-width: 768px) {
+  .install-now .install-now-inside {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    flex-direction: column;
+  }
+  .install-now .install-now-inside .install-text {
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+  .install-now .install-now-inside .install-images {
+    flex-direction: row;
+  }
+  .install-now .install-now-inside .install-images img {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .install-now .center {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .install-now .install-now-inside {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .install-now .install-now-inside .install-text h1 {
+    line-height: 130%;
+    font-size: 36px;
+  }
+  .install-now .install-now-inside .install-images {
+    width: 100%;
+    flex-direction: row;
+  }
+  .install-now .install-now-inside .install-images a {
+    max-width: 45%;
+  }
+  .install-now .install-now-inside .install-images a img {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}

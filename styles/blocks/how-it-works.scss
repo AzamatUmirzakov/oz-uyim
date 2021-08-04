@@ -71,6 +71,9 @@
         align-self: center;
         list-style: none;
         .step {
+          img {
+            display: none;
+          }
           &.open {
             .step-number {
               opacity: 1;

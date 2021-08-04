@@ -449,6 +449,9 @@ section.about div.about-inside div.about-text a.submit-button svg {
   align-self: center;
   list-style: none;
 }
+.how-it-works .how-it-works-inside .steps .steps-list .step img {
+  display: none;
+}
 .how-it-works .how-it-works-inside .steps .steps-list .step.open .step-number {
   opacity: 1;
 }

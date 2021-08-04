@@ -154,7 +154,8 @@ function toggleStep(index) {
     step.querySelector(".step-description").style.maxHeight = maxHeight + "px";
   }
   let step_image = document.querySelector(".step-image img");
-  step_image.src = configuration.images[state.current][index];
+  // step_image.src = configuration.images[state.current][index];
+  step_image.src = step.querySelector("img").src;
 }
 
 function adaptive() {

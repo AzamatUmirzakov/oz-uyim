@@ -81,13 +81,13 @@ setInterval(() => {
 }, interval);
 
 const check_scroll = () => {
+  const how_it_works = document.querySelector(".how-it-works");
+  wrapper.style.height =
+    parseFloat(how_it_works.offsetHeight) +
+    configuration.steps_number * configuration.steps_interval +
+    state.start_point +
+    "px";
   if (wrapper.getBoundingClientRect().top <= -state.start_point) {
-    const how_it_works = document.querySelector(".how-it-works");
-    wrapper.style.height =
-      parseFloat(how_it_works.offsetHeight) +
-      configuration.steps_number * configuration.steps_interval +
-      state.start_point +
-      "px";
     // how_it_works.parentElement.style.top = "";
     // how_it_works.style.bottom = "";
     how_it_works.classList.remove("animation-end");

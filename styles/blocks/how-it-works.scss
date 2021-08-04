@@ -192,11 +192,9 @@
             }
           }
           .step-image {
-            max-width: 100%;
-            height: calc(100vh - 350px);
-            // max-height: 100%;
+            // height: calc(100vh - 300px);
+            max-height: 50vh;
             img {
-              max-height: 100%;
               width: 100%;
             }
           }

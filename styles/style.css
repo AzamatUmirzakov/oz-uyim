@@ -487,14 +487,14 @@ section.about div.about-inside div.about-text a.submit-button svg {
   opacity: 0.5;
 }
 .how-it-works .how-it-works-inside .steps .step-image {
-  height: 70vh;
+  max-height: 70vh;
   display: flex;
   justify-content: center;
-  align-self: flex-start;
+  align-self: center;
   font-size: 0;
 }
 .how-it-works .how-it-works-inside .steps .step-image img {
-  max-height: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1080px) {
@@ -538,10 +538,10 @@ section.about div.about-inside div.about-text a.submit-button svg {
     margin-bottom: 32px;
   }
   .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image {
-    height: calc(100vh - 300px);
+    max-height: 50vh;
   }
   .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image img {
-    max-width: 100%;
+    width: 100%;
   }
 }
 section.submit-form {

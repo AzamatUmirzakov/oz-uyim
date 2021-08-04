@@ -377,27 +377,9 @@ section.about div.about-inside div.about-text a.submit-button svg {
     padding-bottom: 120px;
   }
 }
-.how-it-works-wrapper {
-  position: relative;
-}
-
 .how-it-works {
-  height: 100vh;
   box-sizing: border-box;
   background-color: #f1f7f9;
-}
-.how-it-works.animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
-.how-it-works.animation-end {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 .how-it-works .how-it-works-inside {
   padding-top: 88px;
@@ -440,14 +422,15 @@ section.about div.about-inside div.about-text a.submit-button svg {
   background: #fbc73b;
 }
 .how-it-works .how-it-works-inside .steps {
-  height: calc(100vh - 150px);
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .how-it-works .how-it-works-inside .steps .steps-list {
-  max-height: 100%;
   align-self: center;
   list-style: none;
+}
+.how-it-works .how-it-works-inside .steps .steps-list .step {
+  cursor: pointer;
 }
 .how-it-works .how-it-works-inside .steps .steps-list .step img {
   display: none;
@@ -490,7 +473,6 @@ section.about div.about-inside div.about-text a.submit-button svg {
   opacity: 0.5;
 }
 .how-it-works .how-it-works-inside .steps .step-image {
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-self: flex-start;
@@ -501,51 +483,54 @@ section.about div.about-inside div.about-text a.submit-button svg {
 }
 
 @media (max-width: 1080px) {
-  .how-it-works-wrapper .how-it-works .center {
+  .how-it-works .center {
     max-width: 952px;
   }
 }
 @media (max-width: 800px) {
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
+  .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
     font-size: 28px;
   }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-description p {
+  .how-it-works .how-it-works-inside .steps .steps-list .step .step-description p {
     font-size: 16px;
   }
 }
 @media (max-width: 750px) {
-  .how-it-works-wrapper .how-it-works .center {
+  .how-it-works .center {
     max-width: 400px;
   }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside header h1 {
+  .how-it-works .how-it-works-inside header h1 {
     font-size: 36px;
     text-align: center;
   }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps {
-    grid-template-columns: 1fr;
-  }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list {
-    max-width: 100%;
-  }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step {
-    display: none;
-    margin-bottom: 32px;
-  }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
-    max-height: max-content;
-  }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step.open {
+  .how-it-works .how-it-works-inside .steps {
     display: block;
   }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .steps-list .step:last-child {
+  .how-it-works .how-it-works-inside .steps .steps-list {
+    display: block;
+  }
+  .how-it-works .how-it-works-inside .steps .steps-list .step {
     margin-bottom: 32px;
   }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image {
-    width: 100%;
-    height: calc(100vh - 350px);
+  .how-it-works .how-it-works-inside .steps .steps-list .step:not(:last-of-type) {
+    margin-bottom: 56px;
   }
-  .how-it-works-wrapper .how-it-works .how-it-works-inside .steps .step-image img {
+  .how-it-works .how-it-works-inside .steps .steps-list .step img {
+    margin-top: 32px;
+    display: block;
     max-width: 100%;
+  }
+  .how-it-works .how-it-works-inside .steps .steps-list .step .step-description {
+    max-height: max-content;
+  }
+  .how-it-works .how-it-works-inside .steps .steps-list .step.open {
+    display: block;
+  }
+  .how-it-works .how-it-works-inside .steps .steps-list .step:last-child {
+    margin-bottom: 32px;
+  }
+  .how-it-works .how-it-works-inside .steps .step-image {
+    display: none;
   }
 }
 section.submit-form {

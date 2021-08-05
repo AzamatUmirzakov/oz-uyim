@@ -16,6 +16,7 @@ body {
 
 a.logo {
   max-width: 135px;
+  font-size: 0;
 }
 a.logo img {
   max-width: 100%;

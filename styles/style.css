@@ -213,7 +213,7 @@ div.advantages div.advantage p {
     grid-column: 3/5;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 960px) {
   div.header-top {
     position: absolute;
   }

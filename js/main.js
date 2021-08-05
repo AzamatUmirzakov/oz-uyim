@@ -39,7 +39,7 @@ adaptive();
 
 setInterval(() => {
   adaptive();
-}, 1000);
+}, 500);
 
 function changeGuide(guide) {
   switch (guide) {

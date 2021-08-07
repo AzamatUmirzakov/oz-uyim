@@ -80,11 +80,14 @@
         margin-bottom: 32px;
       }
       .install-images {
+        // display: block;
+        display: grid;
+        grid-template-columns: 44.5% 50.8%;
+        column-gap: 4.7%;
         width: 100%;
         flex-direction: row;
         a {
           align-self: stretch;
-          max-width: 49%;
           margin-bottom: 0;
           align-items: stretch;
           img {

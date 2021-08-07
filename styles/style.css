@@ -576,9 +576,8 @@ section.submit-form form#submit-form div.inputs {
   max-width: 420px;
   width: 100%;
 }
-section.submit-form form#submit-form div.inputs button,
-section.submit-form form#submit-form div.inputs div,
-section.submit-form form#submit-form div.inputs input {
+section.submit-form form#submit-form div.inputs div input {
+  padding: 20px 0;
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -598,7 +597,7 @@ section.submit-form form#submit-form div.inputs div {
   height: 65px;
   transition: all 0.3s ease-out;
 }
-section.submit-form form#submit-form div.inputs div label {
+section.submit-form form#submit-form div.inputs div svg {
   margin-right: 18px;
 }
 section.submit-form form#submit-form div.inputs div:hover, section.submit-form form#submit-form div.inputs div:active {

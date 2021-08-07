@@ -37,9 +37,8 @@ section.submit-form {
     div.inputs {
       max-width: 420px;
       width: 100%;
-      button,
-      div,
-      input {
+      div input {
+        padding: 20px 0;
         width: 100%;
         box-sizing: border-box;
         border: none;
@@ -60,7 +59,7 @@ section.submit-form {
         align-items: center;
         height: 65px;
         transition: all 0.3s ease-out;
-        label {
+        svg {
           margin-right: 18px;
         }
         &:hover,

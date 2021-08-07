@@ -16,23 +16,14 @@
     }
     .install-images {
       a {
-        // height: 100%;
-        // vertical-align: middle;
         font-size: 0;
-        line-height: 0;
-        display: inline-flex;
-        justify-content: center;
-        align-items: stretch;
-        position: relative;
-        img {
-          align-self: stretch;
-        }
+        vertical-align: middle;
       }
       width: 415px;
+      max-width: 100%;
       display: flex;
       justify-content: space-between;
-      // align-items: center;
-      align-items: stretch;
+      align-items: center;
     }
   }
 }
@@ -41,8 +32,10 @@
   .install-now {
     .install-now-inside {
       .install-images {
+        height: 100%;
         flex-direction: column;
-        img:not(:last-of-type) {
+        justify-content: space-between;
+        a:not(:last-of-type) {
           margin-bottom: 33px;
         }
       }
@@ -59,10 +52,14 @@
       .install-text {
         max-width: 100%;
         margin-bottom: 48px;
+        h1 {
+          line-height: 39px;
+          font-size: 36px;
+        }
       }
       .install-images {
         flex-direction: row;
-        img {
+        a:not(:last-of-type) {
           margin-bottom: 0;
         }
       }
@@ -81,23 +78,18 @@
       padding-bottom: 40px;
       .install-text {
         margin-bottom: 32px;
-        h1 {
-          line-height: 39px;
-          font-size: 36px;
-        }
       }
       .install-images {
         width: 100%;
-        display: grid;
-        align-items: stretch;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 5%;
+        flex-direction: row;
         a {
-          // max-width: 45%;
+          align-self: stretch;
+          max-width: 49%;
+          margin-bottom: 0;
+          align-items: stretch;
           img {
             max-width: 100%;
             min-height: 100%;
-            margin-bottom: 0;
           }
         }
       }

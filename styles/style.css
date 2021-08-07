@@ -723,27 +723,23 @@ footer.page-footer div.footer-inside p {
 }
 .install-now .install-now-inside .install-images {
   width: 415px;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
 }
 .install-now .install-now-inside .install-images a {
   font-size: 0;
-  line-height: 0;
-  display: inline-flex;
-  justify-content: center;
-  align-items: stretch;
-  position: relative;
-}
-.install-now .install-now-inside .install-images a img {
-  align-self: stretch;
+  vertical-align: middle;
 }
 
 @media (max-width: 1080px) {
   .install-now .install-now-inside .install-images {
+    height: 100%;
     flex-direction: column;
+    justify-content: space-between;
   }
-  .install-now .install-now-inside .install-images img:not(:last-of-type) {
+  .install-now .install-now-inside .install-images a:not(:last-of-type) {
     margin-bottom: 33px;
   }
 }
@@ -757,10 +753,14 @@ footer.page-footer div.footer-inside p {
     max-width: 100%;
     margin-bottom: 48px;
   }
+  .install-now .install-now-inside .install-text h1 {
+    line-height: 39px;
+    font-size: 36px;
+  }
   .install-now .install-now-inside .install-images {
     flex-direction: row;
   }
-  .install-now .install-now-inside .install-images img {
+  .install-now .install-now-inside .install-images a:not(:last-of-type) {
     margin-bottom: 0;
   }
 }
@@ -776,21 +776,19 @@ footer.page-footer div.footer-inside p {
   .install-now .install-now-inside .install-text {
     margin-bottom: 32px;
   }
-  .install-now .install-now-inside .install-text h1 {
-    line-height: 39px;
-    font-size: 36px;
-  }
   .install-now .install-now-inside .install-images {
     width: 100%;
-    display: grid;
+    flex-direction: row;
+  }
+  .install-now .install-now-inside .install-images a {
+    align-self: stretch;
+    max-width: 49%;
+    margin-bottom: 0;
     align-items: stretch;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5%;
   }
   .install-now .install-now-inside .install-images a img {
     max-width: 100%;
     min-height: 100%;
-    margin-bottom: 0;
   }
 }
 @media (max-width: 1180px) {

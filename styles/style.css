@@ -448,10 +448,10 @@ section.about div.about-inside div.about-text a.submit-button svg {
 .how-it-works .how-it-works-inside .steps .steps-list .step .step-number {
   margin-bottom: 12px;
   color: #3886ce;
-  font-size: 24px;
+  font-size: 28px;
   font-family: "Inter Bold";
   font-weight: 800;
-  opacity: 0.7;
+  opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
 }
 .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
@@ -491,6 +491,7 @@ section.about div.about-inside div.about-text a.submit-button svg {
 @media (max-width: 800px) {
   .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
     font-size: 28px;
+    letter-spacing: 0.005em;
   }
   .how-it-works .how-it-works-inside .steps .steps-list .step .step-description p {
     font-size: 16px;
@@ -682,7 +683,7 @@ footer.page-footer div.footer-inside p {
   }
   section.submit-form div.submit-form-text h1 {
     font-size: 32px;
-    line-height: 44.8px;
+    line-height: 38px;
     margin-bottom: 29px;
   }
   section.submit-form form#submit-form button {
@@ -724,7 +725,18 @@ footer.page-footer div.footer-inside p {
   width: 415px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
+}
+.install-now .install-now-inside .install-images a {
+  font-size: 0;
+  line-height: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+}
+.install-now .install-now-inside .install-images a img {
+  align-self: stretch;
 }
 
 @media (max-width: 1080px) {
@@ -761,19 +773,23 @@ footer.page-footer div.footer-inside p {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  .install-now .install-now-inside .install-text {
+    margin-bottom: 32px;
+  }
   .install-now .install-now-inside .install-text h1 {
-    line-height: 130%;
+    line-height: 39px;
     font-size: 36px;
   }
   .install-now .install-now-inside .install-images {
     width: 100%;
-    flex-direction: row;
-  }
-  .install-now .install-now-inside .install-images a {
-    max-width: 45%;
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
   }
   .install-now .install-now-inside .install-images a img {
     max-width: 100%;
+    min-height: 100%;
     margin-bottom: 0;
   }
 }

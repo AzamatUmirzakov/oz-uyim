@@ -15,10 +15,24 @@
       }
     }
     .install-images {
+      a {
+        // height: 100%;
+        // vertical-align: middle;
+        font-size: 0;
+        line-height: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: stretch;
+        position: relative;
+        img {
+          align-self: stretch;
+        }
+      }
       width: 415px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      // align-items: center;
+      align-items: stretch;
     }
   }
 }
@@ -66,18 +80,23 @@
       padding-top: 40px;
       padding-bottom: 40px;
       .install-text {
+        margin-bottom: 32px;
         h1 {
-          line-height: 130%;
+          line-height: 39px;
           font-size: 36px;
         }
       }
       .install-images {
         width: 100%;
-        flex-direction: row;
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5%;
         a {
-          max-width: 45%;
+          // max-width: 45%;
           img {
             max-width: 100%;
+            min-height: 100%;
             margin-bottom: 0;
           }
         }

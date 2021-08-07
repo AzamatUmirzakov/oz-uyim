@@ -83,10 +83,10 @@
           .step-number {
             margin-bottom: 12px;
             color: #3886ce;
-            font-size: 24px;
+            font-size: 28px;
             font-family: "Inter Bold";
             font-weight: 800;
-            opacity: 0.7;
+            opacity: 0.5;
             transition: opacity 0.3s ease-in-out;
           }
           .step-name {
@@ -141,6 +141,7 @@
           .step {
             .step-name {
               font-size: 28px;
+              letter-spacing: 0.005em;
             }
             .step-description {
               p {

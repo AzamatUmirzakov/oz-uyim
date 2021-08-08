@@ -155,6 +155,9 @@ div.advantages {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 24px;
   z-index: 10;
+  margin: 0 auto;
+  width: 100vw;
+  box-sizing: border-box;
 }
 div.advantages div.advantage {
   background: #fff;
@@ -406,6 +409,7 @@ section.about div.about-inside div.about-text a.submit-button svg {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.07);
+  width: 410px;
 }
 .how-it-works .how-it-works-inside header .header-buttons button {
   background: #fff;
@@ -413,7 +417,10 @@ section.about div.about-inside div.about-text a.submit-button svg {
   border-radius: 7px;
   border: none;
   outline: none;
-  padding: 10px 72px;
+  padding: 10px 0;
+  text-align: center;
+  box-sizing: border-box;
+  width: 50%;
   font-family: "Inter Regular";
   color: #32280c;
   font-size: 16px;
@@ -516,6 +523,12 @@ section.about div.about-inside div.about-text a.submit-button svg {
   }
   .how-it-works .how-it-works-inside .steps .steps-list .step:not(:last-of-type) {
     margin-bottom: 56px;
+  }
+  .how-it-works .how-it-works-inside .steps .steps-list .step .step-number {
+    opacity: 1;
+  }
+  .how-it-works .how-it-works-inside .steps .steps-list .step .step-name {
+    opacity: 1;
   }
   .how-it-works .how-it-works-inside .steps .steps-list .step img {
     margin-top: 32px;

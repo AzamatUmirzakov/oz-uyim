@@ -104,6 +104,8 @@ function adaptive() {
       advantages.firstElementChild.offsetHeight / 2
     }px`;
   }
+  document.querySelector(".about-inside").style.paddingTop =
+    advantages.offsetHeight + "px";
 
   for (let image of Array.from(
     document.querySelectorAll("header.page-header > img")
